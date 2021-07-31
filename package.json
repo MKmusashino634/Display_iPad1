@@ -1,0 +1,25 @@
+{
+  "name": "display_ipad1",
+  "version": "1.0.0",
+  "description": "最終目標：iPad1(ios5.1.1)をwindows10のサブディスプレイにするdebianパッケージを作成する！",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MKmusashino634/Display_iPad1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MKmusashino634/Display_iPad1/issues"
+  },
+  "homepage": "https://github.com/MKmusashino634/Display_iPad1#readme",
+  "dependencies": {
+    "ejs": "^3.1.6"
+  }
+}

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "display_capture", "display_capture.csproj", "{62BA5057-4645-40C2-9109-86412F20B5FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62BA5057-4645-40C2-9109-86412F20B5FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62BA5057-4645-40C2-9109-86412F20B5FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62BA5057-4645-40C2-9109-86412F20B5FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62BA5057-4645-40C2-9109-86412F20B5FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D5CC80D-563F-489A-9281-4C9BB0CA9929}
+	EndGlobalSection
+EndGlobal

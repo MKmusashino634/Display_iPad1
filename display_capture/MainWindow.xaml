@@ -1,0 +1,50 @@
+﻿<Window
+    x:Class="ScreenShot.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ScreenShotCore"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="キャプチャ"
+    Width="640"
+    Height="400"
+    ResizeMode="CanResizeWithGrip"
+    WindowStyle="ToolWindow"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <!-- ボタンの既定スタイル -->
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="150" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="Padding" Value="5" />
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="SlateGray">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Viewbox>
+            <Image x:Name="CaptureImage" Margin="5" />
+        </Viewbox>
+        <TextBlock
+            x:Name="SaveInfo"
+            Margin="10"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="60"
+            Text="保存しました。"
+            Visibility="Collapsed" />
+
+        <StackPanel
+            Grid.Row="1"
+            Background="LightSteelBlue"
+            Orientation="Horizontal">
+            <Button Click="CaptureButton_Click" Content="キャプチャ(_1)" />
+            <Button Click="SaveButton_Click" Content="保存(_2)" />
+            <Button Click="CaptureAndSaveButton_Click" Content="キャプチャして保存(_3)" />
+        </StackPanel>
+    </Grid>
+    </Window>

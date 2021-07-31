@@ -1,0 +1,5 @@
+C:\Users\shmak\Desktop\Display_iPad1\display_capture\obj\Debug\netcoreapp3.1\display_capture.csprojAssemblyReference.cache
+C:\Users\shmak\Desktop\Display_iPad1\display_capture\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\shmak\Desktop\Display_iPad1\display_capture\obj\Debug\netcoreapp3.1\display_capture_MarkupCompile.cache
+C:\Users\shmak\Desktop\Display_iPad1\display_capture\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\shmak\Desktop\Display_iPad1\display_capture\obj\Debug\netcoreapp3.1\display_capture_MarkupCompile.lref
