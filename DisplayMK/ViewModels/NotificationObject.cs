@@ -1,39 +1,46 @@
-namespace DisplayiPad1.ViewModels
+namespace DisplayiPad1
 {
+    using System.ComponentModel;
+    using System.Runtime.CompilerServices;
+
     ///<summary>
     ///]MainView ウィンドウに対するデータコンテキストを表す
     ///</summary>
-    internal class MainViewModel : NotificationObject
+    internal abstract class NotificationObject : INotifyPropertyChanged
     {
-        private string _upperString;
-        ///<simmary>
-        ///大文字にする、読み取り専用
-        ///</simmary>
-        public string UpperString
-        {
-            get { return this._upperString; }
-            private set  { SetProperty(ref  this._upperString, value); }
-        }
-
-        private string _inputString;
+        #region INotifyPropertyCanged の実装
         ///<summary>
-        ///入力文字列の取得、設定、getもsetも公開
+        ///プロパティ変更で発生
         ///</summary>
-        public string InputString
-        {
-            get { return this._inputString; }
-            set {
-                if (SetProperty(ref this._inputString, value)) 
-                {
-                    //入力された文字列を大文字に変換
-                    this.UpperString = this._inputString.ToUpper();
+        public event PropertyChangedEventHandler PropertyChanged;
 
-                    //出力ウィンドウに表示
-                    System.Diagnostics.Debug.WriteLine("大文字=" + this.UpperString);
-                    //DebugクラスはReleaseモードでは読み込まれない。
-                }
-            }
+        ///<summary>
+        ///PropertyChangedイベントを発行
+        ///</summary>
+        ///<param name="propertyName">プロパティ値に変更があったプロパティ名を指定する</param>
+        protected void RaisePropertyChanged([CallerMemberName]string propertyName = null)
+        {
+            var h = this.PropertyChanged;
+            if (h != null) h(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        ///<summary>
+        ///<typeparam name="T">プロパティの型</typeparam>
+        ///<param name="target="">変更するプロパティの実体をref指定する</param>s
+        ///<param name="value"">変更後の値の指定</param>
+        ///<param name="propertyName"">プロパティ名の指定</param>
+        ///<returns>変更ありならtrue、bool型は条件により真偽を返す型</returns>
+        ///メソッドに引数を渡す方法に、値渡しと参照渡しがある。
+        ///</summary>
+        protected bool SetProperty<T>(ref T target, T value, [CallerMemberName]string propertyName = null)
+        {
+            if (Equals(target, value)) return false;
+            target = value;
+            RaisePropertyChanged(propertyName);
+            return true;
+        }
+
+        #endregion INotifyPropertyCanged の実装
     }
 }
 
