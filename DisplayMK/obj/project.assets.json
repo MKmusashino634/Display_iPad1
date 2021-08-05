@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\shmak\\Desktop\\MYPROJECT\\YKWpfIntroduction.Practices-local\\YKWpfIntroduction.Practices.csproj",
-      "projectName": "YKWpfIntroduction.Practices",
-      "projectPath": "C:\\Users\\shmak\\Desktop\\MYPROJECT\\YKWpfIntroduction.Practices-local\\YKWpfIntroduction.Practices.csproj",
+      "projectUniqueName": "C:\\Users\\shmak\\Desktop\\Display_iPad1\\DisplayMK\\DisplayiPad1.csproj",
+      "projectName": "DisplayiPad1",
+      "projectPath": "C:\\Users\\shmak\\Desktop\\Display_iPad1\\DisplayMK\\DisplayiPad1.csproj",
       "packagesPath": "C:\\Users\\shmak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\shmak\\Desktop\\MYPROJECT\\YKWpfIntroduction.Practices-local\\obj\\",
+      "outputPath": "C:\\Users\\shmak\\Desktop\\Display_iPad1\\DisplayMK\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

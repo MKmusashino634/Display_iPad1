@@ -6,10 +6,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace YKWpfIntroduction.Practices
+namespace DisplayiPad1
 {
-    using YKWpfIntroduction.Practices.ViewModels;
-    using YKWpfIntroduction.Practices.Views;
+    using DisplayiPad1.ViewModels;
+    using DisplayiPad1.Views;
 
     /// <summary>
     /// Interaction logic for App.xaml
@@ -27,6 +27,7 @@ namespace YKWpfIntroduction.Practices
             var vm = new MainViewModel();
 
             //ウィンドウに対する ViewModel をデータコンテキスト化 = 何らかの制御情報化
+            //MainViewウィンドウはMainViewModelを従える
             w.DataContext = vm;
 
             //ウィンドウの表示
