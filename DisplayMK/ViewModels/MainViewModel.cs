@@ -1,7 +1,7 @@
 namespace DisplayiPad1.ViewModels
 {
     ///<summary>
-    ///]MainView ウィンドウに対するデータコンテキストを表す
+    ///MainView ウィンドウに対するデータコンテキストを表す
     ///</summary>
     internal class MainViewModel : NotificationObject
     {
@@ -32,6 +32,27 @@ namespace DisplayiPad1.ViewModels
                     System.Diagnostics.Debug.WriteLine("大文字=" + this.UpperString);
                     //DebugクラスはReleaseモードでは読み込まれない。
                 }
+            }
+        }
+
+        private DelegateCommand _clearCommand;
+        ///<summary>
+        ///クリアコマンドの取得、getのみ
+        ///</summary>
+        public DelegateCommand ClearCommand
+        {
+            get
+            {
+                /* ?? は初期化も一緒にする
+                if (this._clearCommand == null) {
+                    this._clearCommand = new DelegateCommand(_ => this.InputString = "");
+                }
+                return this._clearCommand;
+                */
+
+                return this._clearCommand ?? (this._clearCommand = new DelegateCommand(
+                    _ => this.InputString = "",
+                    _ => !string.IsNullOrEmpty(this.InputString)));
             }
         }
     }
@@ -72,3 +93,27 @@ namespace DisplayiPad1.ViewModels
  * 結果的に、テキストを入力した直後に表示が反映されるようになる。
  */
 
+/* ラムダ式：匿名のデリゲートを作成、 式木（しきぼく、expression tree）の作成
+ * delegate修飾子の省略ができる。
+ * 例えば、「  Func<int, bool> predicate = x => { return x < comparedValue; };  」
+ * （ Func<int, bool>　などがデリゲート）
+ * これをもっと省略すれば、「  Func<int, bool> predicate = x => x < comparedValue;  」
+ * 引数がないならxの部分を()にする。
+ * 
+ * 
+ * 
+ * （Qiitaより）
+ * ポイントは概要にもあるように、取得する式木から代入する式木を組み立てるところです。
+ * 
+ * () => this.Name
+ * ↓Expressionであれこれ
+ * x => this.Name = x
+ * これにより使用時の記述を短くすることが出来ます。
+ * なおこのメソッド自体はプロパティだけでなく、フィールドやローカル変数に対しても使用可能です。
+ * 式木からデリゲートを生成する部分は少し重いです。パフォーマンスがネックになるのであれば、
+ * 内部でデリゲートをキャッシュする必要があります。
+ * （https://qiita.com/soi/items/043bf216935b8a47820c）
+ * 
+ * Control.Invoke(でりげーど)：引数のデリゲートを実行
+ * Expression<TDelegate>.Compile():式木によって記述されたラムダ式をコンパイルしデリゲートを生成
+ */

@@ -18,3 +18,4 @@ C:\Users\shmak\Desktop\Display_iPad1\DisplayMK\obj\Debug\net5.0-windows\Displayi
 C:\Users\shmak\Desktop\Display_iPad1\DisplayMK\obj\Debug\net5.0-windows\ref\DisplayiPad1.dll
 C:\Users\shmak\Desktop\Display_iPad1\DisplayMK\obj\Debug\net5.0-windows\DisplayiPad1.pdb
 C:\Users\shmak\Desktop\Display_iPad1\DisplayMK\obj\Debug\net5.0-windows\DisplayiPad1.genruntimeconfig.cache
+C:\Users\shmak\Desktop\Display_iPad1\DisplayMK\obj\Debug\net5.0-windows\DisplayiPad1.csproj.AssemblyReference.cache

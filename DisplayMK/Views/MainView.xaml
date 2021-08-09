@@ -3,10 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainView" Height="300" Width="300">
     <StackPanel>
-        <TextBox Text="{Binding InputString}"/>
-        <!--   <TextBox Text="{Binding InputString, UpdateSourceTriggaer=PropertyChanged}"/>   -->
-        <TextBlock Text="{Binding UpperString}"/>
-        <!--   <TextBlock Text="{Binding UpperString}"/>   -->
-        <Button Content="click"/>
+        <TextBox Text="{Binding InputString, UpdateSourceTrigger=PropertyChanged}" />
+        <!--
+        <TextBox Text="{Binding InputString, UpdateSourceTrigger=PropertyChanged}" />
+        -->
+        <TextBlock Text="{Binding UpperString}" />
+        <!--
+        <TextBlock Text="{Binding UpperString}" />
+        -->
+        <Button Content="Clear" Command="{Binding ClearCommand}" />
+        <!--
+        <Button Content="Clear" Command="{Binding ClearCommand}" />
+        -->
     </StackPanel>
 </Window>

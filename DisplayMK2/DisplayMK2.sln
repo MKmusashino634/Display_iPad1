@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisplayMK2", "DisplayMK2.csproj", "{7BCD5E26-1677-4FE0-BF34-AF2CC6A20F2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BCD5E26-1677-4FE0-BF34-AF2CC6A20F2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BCD5E26-1677-4FE0-BF34-AF2CC6A20F2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BCD5E26-1677-4FE0-BF34-AF2CC6A20F2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BCD5E26-1677-4FE0-BF34-AF2CC6A20F2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E61CCFA7-D048-4720-90D8-788EAE7F5AA5}
+	EndGlobalSection
+EndGlobal
