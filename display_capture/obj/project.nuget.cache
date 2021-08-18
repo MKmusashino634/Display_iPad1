@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "4hYzO4m4ufnZYzQr/i2dI8kjuRsecoO0tAbyMt0FPa8PRfACHu0aZ8xaU6LZo3jmVsLtWMQNtvB2uAdVdxjAPg==",
+  "dgSpecHash": "qw65ScDnli3RJA6g4hd+ESycMWWaSrYpeE/44zSjhiSRKKepkJIIvZ1zAYHUZA0QZoc8Ouj72H0BF95Vwz16pA==",
   "success": true,
   "projectFilePath": "C:\\Users\\shmak\\Desktop\\Display_iPad1\\display_capture\\display_capture.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\shmak\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\shmak\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\shmak\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

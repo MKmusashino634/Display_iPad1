@@ -96,29 +96,27 @@ namespace ScreenShot
             int w = (int)SystemParameters.PrimaryScreenWidth;
             int h = (int)SystemParameters.PrimaryScreenHeight;
 
-            using (var bmp = new DRW.Bitmap(w, h, DIMG.PixelFormat.Format32bppRgb))
-            using (var grph = DRW.Graphics.FromImage(bmp))
+            using var bmp = new DRW.Bitmap(w, h, DIMG.PixelFormat.Format32bppRgb);
+            using var grph = DRW.Graphics.FromImage(bmp);
+            // スクリーンイメージをコピー
+            grph.CopyFromScreen(
+                sourceX: 0, sourceY: 0,
+                destinationX: 0, destinationY: 0,
+                bmp.Size);
+
+            IntPtr bmpHandle = bmp.GetHbitmap();
+
+            try
             {
-                // スクリーンイメージをコピー
-                grph.CopyFromScreen(
-                    sourceX: 0, sourceY: 0,
-                    destinationX: 0, destinationY: 0,
-                    bmp.Size);
-
-                IntPtr bmpHandle = bmp.GetHbitmap();
-
-                try
-                {
-                    return System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(
-                        bmpHandle,
-                        IntPtr.Zero,
-                        Int32Rect.Empty,
-                        MIMG.BitmapSizeOptions.FromEmptyOptions());
-                }
-                finally
-                {
-                    DeleteObject(bmpHandle);
-                }
+                return System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(
+                    bmpHandle,
+                    IntPtr.Zero,
+                    Int32Rect.Empty,
+                    MIMG.BitmapSizeOptions.FromEmptyOptions());
+            }
+            finally
+            {
+                DeleteObject(bmpHandle);
             }
         }
 
@@ -134,16 +132,14 @@ namespace ScreenShot
             if (!Directory.Exists(saveFolder))
             {
                 // 保存先フォルダが無ければ作成
-                Directory.CreateDirectory(saveFolder);
+                _ = Directory.CreateDirectory(saveFolder);
             }
 
             // 画像ファイル保存
-            using (Stream stream = new FileStream(saveFilePath, FileMode.Create))
-            {
-                var encoder = new MIMG.JpegBitmapEncoder();
-                encoder.Frames.Add(MIMG.BitmapFrame.Create((MIMG.BitmapSource)CaptureImage.Source));
-                encoder.Save(stream);
-            }
+            using Stream stream = new FileStream(saveFilePath, FileMode.Create);
+            var encoder = new MIMG.JpegBitmapEncoder();
+            encoder.Frames.Add(MIMG.BitmapFrame.Create((MIMG.BitmapSource)CaptureImage.Source));
+            encoder.Save(stream);
         }
 
         /// <summary>

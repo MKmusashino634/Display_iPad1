@@ -1,0 +1,14 @@
+C:\Users\shmak\Desktop\Display_iPad1\DisplayMK1\bin\Debug\DisplayMK1.exe.config
+C:\Users\shmak\Desktop\Display_iPad1\DisplayMK1\bin\Debug\DisplayMK1.exe
+C:\Users\shmak\Desktop\Display_iPad1\DisplayMK1\bin\Debug\DisplayMK1.pdb
+C:\Users\shmak\Desktop\Display_iPad1\DisplayMK1\obj\Debug\DisplayMK1.csproj.AssemblyReference.cache
+C:\Users\shmak\Desktop\Display_iPad1\DisplayMK1\obj\Debug\Views\MainView.baml
+C:\Users\shmak\Desktop\Display_iPad1\DisplayMK1\obj\Debug\Views\MainView.g.cs
+C:\Users\shmak\Desktop\Display_iPad1\DisplayMK1\obj\Debug\App.g.cs
+C:\Users\shmak\Desktop\Display_iPad1\DisplayMK1\obj\Debug\DisplayMK1_MarkupCompile.cache
+C:\Users\shmak\Desktop\Display_iPad1\DisplayMK1\obj\Debug\DisplayMK1.g.resources
+C:\Users\shmak\Desktop\Display_iPad1\DisplayMK1\obj\Debug\DisplayMK1.Properties.Resources.resources
+C:\Users\shmak\Desktop\Display_iPad1\DisplayMK1\obj\Debug\DisplayMK1.csproj.GenerateResource.cache
+C:\Users\shmak\Desktop\Display_iPad1\DisplayMK1\obj\Debug\DisplayMK1.csproj.CoreCompileInputs.cache
+C:\Users\shmak\Desktop\Display_iPad1\DisplayMK1\obj\Debug\DisplayMK1.exe
+C:\Users\shmak\Desktop\Display_iPad1\DisplayMK1\obj\Debug\DisplayMK1.pdb
